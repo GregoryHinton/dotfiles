@@ -19,14 +19,11 @@ alias targets='systemctl status {emergency,rescue,multi-user,graphical}.target'
 # Re-source aliases
 alias a='source ~/.bash_aliases'
 
-# Show battery status
-alias b='acpi -b'
-
 # Replace current terminal with "standard corner" terminal
 alias c='corner'
 
 # Side-by-side diff
-alias d='diff -yr --suppress-common-lines --minimal --no-dereference'
+alias d='diff -bdEryZ --minimal'
 
 # Variants of grep command
 alias grep='grep --colour=auto'
@@ -62,4 +59,3 @@ alias t='gnome-terminal -q --window --tab'
 # this bash trick allows the command to be an alias
 alias sudo='\sudo '
 alias watch='\watch '
-
