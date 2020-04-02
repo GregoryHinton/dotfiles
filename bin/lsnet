@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# n - show summary of current network status
-
-systemctl status NetworkManager.service --no-pager 
-echo
-ip a 

@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# interrupts - watch processor interrupts
-
-watch -n1 'cat /proc/interrupts'

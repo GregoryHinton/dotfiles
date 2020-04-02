@@ -1,3 +1,0 @@
-#! /bin/sh
-sudo setkeycodes 56 43
-exit 0
