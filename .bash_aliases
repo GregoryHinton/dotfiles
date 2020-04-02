@@ -43,10 +43,11 @@ alias h='history ${LINES}'
 alias i='sudo inxi -Faxxx'
 
 # Variants of ls command
-alias l='ls --color=auto'
-alias ll='l -alh'
-alias l*='l -d * 2>/dev/null'
-alias l.='l -d .[^.]* ..?* 2>/dev/null'
+alias l='\ls'
+alias ls='\ls --color=auto'
+alias ll='ls -alh'
+alias l*='ls -d * 2>/dev/null'
+alias l.='ls -d .[^.]* ..?* 2>/dev/null'
 
 # Open a data file with its default GUI app
 alias open='xdg-open'
