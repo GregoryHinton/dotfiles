@@ -1,0 +1,29 @@
+[Added Associations]
+text/plain=org.gnome.gedit.desktop;
+application/pdf=org.gnome.Evince.desktop;libreoffice-draw.desktop;
+x-scheme-handler/http=firefox.desktop;firefox-developer-edition.desktop;
+x-scheme-handler/https=firefox.desktop;firefox-developer-edition.desktop;
+x-scheme-handler/ftp=firefox.desktop;firefox-developer-edition.desktop;
+x-scheme-handler/chrome=firefox.desktop;firefox-developer-edition.desktop;
+text/html=firefox.desktop;firefox-developer-edition.desktop;
+application/x-extension-htm=firefox.desktop;firefox-developer-edition.desktop;
+application/x-extension-html=firefox.desktop;firefox-developer-edition.desktop;
+application/x-extension-shtml=firefox.desktop;firefox-developer-edition.desktop;
+application/xhtml+xml=firefox.desktop;firefox-developer-edition.desktop;
+application/x-extension-xhtml=firefox.desktop;firefox-developer-edition.desktop;
+application/x-extension-xht=firefox.desktop;firefox-developer-edition.desktop;
+image/gif=org.gnome.gThumb.desktop;
+image/jpeg=org.gnome.gThumb.desktop;org.gimp.GIMP.desktop;firefox.desktop;
+
+[Default Applications]
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+text/html=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
