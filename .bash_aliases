@@ -1,0 +1,64 @@
+#
+# ~/.bash_aliases
+#
+
+unalias -a
+shopt -s expand_aliases
+
+# Common systemctl/journalctl commands
+alias enabled='systemctl list-unit-files --state=enabled'
+alias disabled='systemctl list-unit-files --state=disabled'
+alias running='systemctl --state=running'
+alias exited='systemctl --state=exited'
+alias failed='systemctl --failed --all'
+alias masked='ls -Al /etc/systemd/system/ | fgrep /dev/null'
+alias errors='journalctl -p3 -x -b0'
+alias targets='systemctl status {emergency,rescue,multi-user,graphical}.target'
+
+
+# Re-source aliases
+alias a='source ~/.bash_aliases'
+
+# Show battery status
+alias b='acpi -b'
+
+# Replace current terminal with "standard corner" terminal
+alias c='corner'
+
+# Side-by-side diff
+alias d='diff -yr --suppress-common-lines --minimal --no-dereference'
+
+# Git bare repository for dotfiles
+alias dot='git --git-dir=$HOME/.git-dotfiles/ --work-tree=$HOME'
+
+# Variants of grep command
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+
+# Show command history
+alias h='history ${LINES}'
+
+# Standard set of inxi options
+alias i='sudo inxi -Faxxx'
+
+# Variants of ls command
+alias l='ls --color=auto'
+alias ll='l -alh'
+alias l*='l -d * 2>/dev/null'
+alias l.='l -d .[^.]* ..?* 2>/dev/null'
+
+# Open a data file with its default GUI app
+alias open='xdg-open'
+
+# Show current terminal size
+alias s='echo ${COLUMNS}x${LINES}'
+
+# Open a new terminal window with two tabs
+alias t='gnome-terminal -q --window --tab'
+
+# The first argument to 'sudo' or 'watch' is another command;
+# this bash trick allows the command to be an alias
+alias sudo='\sudo '
+alias watch='\watch '
+
