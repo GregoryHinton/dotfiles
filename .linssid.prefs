@@ -1,0 +1,11 @@
+version 3.3
+colwidth 37 140 139 51 100 68 100 65 70 62 70 52 58 56 100 100 117 247 63
+colvis 1 1 1 1 0 1 0 1 1 1 1 1 1 1 0 0 1 1 1
+visorder 0 1 2 3 18 4 5 6 7 8 9 10 12 13 11 14 15 16 17
+sort 10 1
+maingeom 0 28 1600 844
+mainsplit 303 375
+plottab 0
+naptime 0
+plotprefs 10 -100 -20 1
+logdata 0
