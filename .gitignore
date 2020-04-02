@@ -1,7 +1,10 @@
+# Ignore everything by default
 *
-!.gitignore
-!.bash*
-.bash_history
-!.profile
-!bin
-!.github
+
+# Whitelisted files
+!./.gitignore
+!./.bash*
+# Ignore history file
+./.bash_history
+!./.profile
+!.github/README.md
