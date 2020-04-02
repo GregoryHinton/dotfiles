@@ -1,0 +1,7 @@
+*
+!.gitignore
+!.bash*
+.bash_history
+!.profile
+!bin
+!.github
