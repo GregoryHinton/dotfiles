@@ -28,13 +28,13 @@ alias c='corner'
 # Side-by-side diff
 alias d='diff -yr --suppress-common-lines --minimal --no-dereference'
 
-# Git bare repository for dotfiles
-alias dot='git --git-dir=$HOME/.git-dotfiles/ --work-tree=$HOME'
-
 # Variants of grep command
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
+
+# Git bare repository for dotfiles
+alias gitdot='git --git-dir=$HOME/.git-dotfiles/ --work-tree=$HOME'
 
 # Show command history
 alias h='history ${LINES}'
