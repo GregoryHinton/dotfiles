@@ -40,6 +40,7 @@ alias gitdot='git --git-dir=$HOME/.git-dotfiles/ --work-tree=$HOME'
 alias h='history ${LINES}'
 
 # Standard set of inxi options
+# Use 'i -z' to filter out "sensitive" info
 alias i='sudo inxi -Faxxx'
 
 # Variants of ls command
