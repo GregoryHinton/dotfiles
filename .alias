@@ -19,8 +19,13 @@ alias targets='systemctl status {emergency,rescue,multi-user,graphical}.target'
 # Re-source aliases
 alias a='source ~/.alias'
 
+# Beep the speakers
+alias beep='paplay /usr/share/sounds/gnome/default/alerts/drip.ogg'
+
 # Replace current terminal with "standard corner" terminal
-alias c='corner'
+alias c='self=$(xdotool getactivewindow) && 
+         gnome-terminal -q --geometry=120x100-0+0 --window --tab && 
+         xdotool windowclose $self'
 
 # Side-by-side diff
 alias d='diff -bdEryZ --minimal'
