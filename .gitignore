@@ -1,11 +1,27 @@
-# Ignore everything by default
+# Ignore by default; whitelist desired
 *
-
-# Whitelisted files
-!./.gitignore
-!./.bash*
-# Ignore history file
-./.bash_history
-!./.profile
-!./.github/README.md
-!./.config/**
+!.alias
+!.bash_profile
+!.bashrc
+!.config/X11/xinitrc
+!.config/caffeine/whitelist.txt
+!.config/dir_colors
+!.config/gtk-3.0/gtk.css
+!.config/gtk-3.0/settings.ini
+!.config/gtk-4.0/settings.ini
+!.config/hexchat/hexchat.conf
+!.config/hexchat/keybindings.conf
+!.config/hexchat/servlist.conf
+!.config/htop/htoprc
+!.config/neofetch/config.conf
+!.config/procps/toprc
+!.config/transmission/settings.json
+!.config/vim/vimrc
+!.config/vlc/vlcrc
+!.config/yay/config.json
+!.gitconfig
+!.github/**
+!.gitignore
+!.linssid.prefs
+!.profile
+!.wavemonrc

@@ -58,7 +58,7 @@ xhost +local:root > /dev/null 2>&1
 shopt -sq checkwinsize
 
 # Read aliases
-[[ -r ~/.bash_aliases ]] && source ~/.bash_aliases
+[[ -r ~/.alias ]] && source ~/.alias
 
 # Resume saving commands to shell history
 shopt -s histappend

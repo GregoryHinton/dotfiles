@@ -1,5 +1,5 @@
 #
-# ~/.bash_aliases
+# ~/.alias
 #
 
 unalias -a
@@ -17,7 +17,7 @@ alias targets='systemctl status {emergency,rescue,multi-user,graphical}.target'
 
 
 # Re-source aliases
-alias a='source ~/.bash_aliases'
+alias a='source ~/.alias'
 
 # Replace current terminal with "standard corner" terminal
 alias c='corner'
