@@ -1,7 +1,10 @@
 
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export EDITOR=vim
+export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
 
-export EDITOR=/usr/bin/vi
+export TERMINAL=gnome-terminal
+
+export BROWSER=firefox
 
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_CACHE_HOME="$HOME"/.cache
@@ -16,5 +19,4 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/gdm/Xauthority
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
 
-export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
-
+export QT_QPA_PLATFORMTHEME="qt5ct"
