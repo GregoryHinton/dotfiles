@@ -25,6 +25,9 @@ alias c='corner'
 # Side-by-side diff
 alias d='diff -bdEryZ --minimal'
 
+# Downloads directory
+alias dl='cd ~/Downloads'
+
 # Variants of grep command
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
