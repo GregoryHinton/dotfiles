@@ -2,7 +2,7 @@
 # ~/.profile
 #
 
-export PATH="$HOME/bin:$HOME/bin/scripts:/usr/local/bin:/usr/bin"
+export PATH="$HOME/bin:$HOME/sh:/usr/local/bin:/usr/bin"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
