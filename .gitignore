@@ -19,7 +19,6 @@
 !.config/vim/vimrc
 !.config/vlc/vlcrc
 !.config/yay/config.json
-!.gitconfig
 !.github/**
 !.gitignore
 !.linssid.prefs
