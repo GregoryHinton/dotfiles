@@ -5,5 +5,17 @@ runtime! defaults.vim
 set undodir=$XDG_DATA_HOME/vim/undo
 set directory=$XDG_DATA_HOME/vim/swap
 set backupdir=$XDG_DATA_HOME/vim/backup
-set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
+"set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
+set viminfofile=$XDG_DATA_HOME/vim/viminfo
 set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
+set path+=**
+set wildmenu
+set number
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set nocompatible
+set mouse=v
+syntax enable
+filetype plugin on
+

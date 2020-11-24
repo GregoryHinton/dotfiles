@@ -158,6 +158,8 @@ EXEC 01;32
 .7z  01;31
 .rz  01;31
 .cab 01;31
+.zst 01;31
+.zstd 01;31
 
 # image formats
 .jpg 01;35

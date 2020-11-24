@@ -6,27 +6,33 @@ unalias -a
 shopt -s expand_aliases
 
 # Common systemctl/journalctl commands
-alias enabled='systemctl list-unit-files --state=enabled'
 alias disabled='systemctl list-unit-files --state=disabled'
-alias running='systemctl --state=running'
-alias exited='systemctl --state=exited'
-alias failed='systemctl --failed --all'
+alias enabled='systemctl list-unit-files --state=enabled'
+alias errors='journalctl -p3 -b0'
+alias exited='systemctl list-units --state=exited'
+alias failed='systemctl list-units --failed'
 alias masked='ls -Al /etc/systemd/system/ | fgrep /dev/null'
-alias errors='journalctl -p3 -x -b0'
-alias targets='systemctl status {emergency,rescue,multi-user,graphical}.target'
+alias running='systemctl list-units --state=running'
+alias sockets='systemctl list-sockets  --all'
+alias targets='systemctl --type=target --state=active'
+alias timers='systemctl list-timers --all'
 
-
-# Re-source aliases
+# Re-source this file
 alias a='source ~/.alias'
 
-# Beep the speakers
-alias beep='paplay /usr/share/sounds/gnome/default/alerts/drip.ogg'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Side-by-side diff
-alias d='diff -bdEryZ --minimal'
+alias diff2='diff -bdEryZ --minimal --width=${COLUMNS}'
 
 # Downloads directory
 alias dl='cd ~/Downloads'
+
+# Docker stuff
+alias d='docker'
+alias d.c='docker container'
+alias d.i='docker images'
+alias dc='docker-compose'
 
 # Variants of grep command
 alias grep='grep --colour=auto'
@@ -39,16 +45,14 @@ alias gitdot='git --git-dir=$HOME/.git-dotfiles/ --work-tree=$HOME'
 # Show command history
 alias h='history ${LINES}'
 
-# Standard set of inxi options
-# Use 'i -z' to filter out "sensitive" info
-alias i='sudo inxi -Faxxx'
+# inxi format suitable for posting online
+alias i='sudo inxi -Faxxxz --no-host'
 
 # Variants of ls command
-alias l='\ls'
-alias ls='\ls --color=auto'
-alias ll='ls -alh'
-alias l*='ls -d * 2>/dev/null'
-alias l.='ls -d .[^.]* ..?* 2>/dev/null'
+alias ls='ls -h --color=auto --dereference-command-line-symlink-to-dir'
+alias ll='ls -Al'
+alias l='ll -d * 2>/dev/null'
+alias l.='ll -d .[^.]* ..?* 2>/dev/null'
 
 # Open a data file with its default GUI app
 alias open='xdg-open'
@@ -56,10 +60,19 @@ alias open='xdg-open'
 # Show current terminal size
 alias s='echo ${COLUMNS}x${LINES}'
 
-# Open a new terminal window with two tabs
-alias t='gnome-terminal -q --window --tab'
+# Capture output from startx
+# Assumes we have write permission for /var/log/
+alias startx='startx >/var/log/startx.log 2>&1'
 
-# The first argument to 'sudo' or 'watch' is another command;
+# Make 'which' more powerful
+# Probably better to use 'type' instead
+alias which='(alias; declare -f) | \which --read-alias --read-functions'
+
+# Search the local copy of the Arch wiki
+# Assumes packages arch-wiki-{docs,lite} are installed
+alias wiki='wiki-search-html'
+
+# 'sudo' and 'watch' are followed by a command
 # this bash trick allows the command to be an alias
 alias sudo='\sudo '
 alias watch='\watch '
