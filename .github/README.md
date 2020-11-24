@@ -1,10 +1,10 @@
 # dotfiles
 
-Personal dotfiles using a bare git repository.
+Dotfiles from ~/ and ~/.config/ using a bare git repository.
 
 # System
 
-* Distro: Manjaro
+* Distro: Arch/Endeavour
 * Desktop: Gnome 3
 * Shell: bash
 * Terminal: gnome-terminal
